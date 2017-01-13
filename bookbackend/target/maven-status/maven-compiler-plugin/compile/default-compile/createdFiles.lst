@@ -1,0 +1,5 @@
+com\niit\crudappbackend\dao\PersonDAO.class
+com\niit\crudappbackend\model\Person.class
+com\niit\crudappbackend\dao\PersonDAOImpl.class
+com\niit\crudappbackend\App.class
+com\niit\crudappbackend\config\AppContextConfig.class
