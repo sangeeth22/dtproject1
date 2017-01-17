@@ -750,7 +750,7 @@ background-color: #428bca;
 											<div class="thumbnail">
 												<!--span class="e-label"><div>Sale</div></span-->
 												<span class="service-link text-center">
-													<img class="img-responsive" src="G:\products/${product.name}.jpg" style="width:200px;height:200px"alt=""/>
+													<img class="img-responsive" src="E:\\productimage\\${product.id}.jpg" style="width:200px;height:200px"alt=""/>
 									
 												</span>
 												<div class="caption">

@@ -2,7 +2,7 @@
 	
 	import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
+import org.springframework.ui.Model;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -70,20 +70,23 @@ import com.niit.bookbackend.model.UserDetails;
 			}
 			return "index";
 		}
-		@RequestMapping("/suggestion_cart")
-		public String suggestion()
+		@RequestMapping("/kids book")
+		public String kidsbook( Model model)
 		{
-			return "suggestion";
+			model.addAttribute("userClickedaddsupplier","true");
+			return "kids book";
 		}
-		@RequestMapping("/wedding_suggestion")
-		public String wedding()
+		@RequestMapping("/youngsters and teens book")
+		public String youngstersandteensbook ( Model model)
 		{
-			return "suggestion1";
+			model.addAttribute("userClickedaddsupplier","true");
+			return "youngsters and teens book";
 		}
-		@RequestMapping("/birthday_suggestion")
-		public String birthday()
+		@RequestMapping("/text book")
+		public String textbook( Model model)
 		{
-			return "suggestion2";
+			model.addAttribute("userClickedaddsupplier","true");
+			return "text book";
 		}
 		@RequestMapping("/aboutus")
 		public String aboutus()
