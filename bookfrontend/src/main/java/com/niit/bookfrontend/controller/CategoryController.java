@@ -1,0 +1,67 @@
+package com.niit.bookfrontend.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.niit.bookbackend.dao.CategoryDAO;
+import com.niit.bookbackend.model.Category;
+import com.niit.bookbackend.util.Util;
+@Controller
+public class CategoryController {
+	
+	@Autowired(required=true)
+	private CategoryDAO categoryDAO;
+	
+	@Autowired(required=true)
+	private Category category;
+	
+	
+	@RequestMapping(value="/category")
+	public String listcategory(Model model)
+	{
+	model.addAttribute("category",category);
+	model.addAttribute("categoryList",this.categoryDAO.list());
+	return "category";
+	}
+	
+	
+	@RequestMapping(value="/addcategory")
+	public String addcategory(@ModelAttribute("category") Category category,Model model)
+	{
+		String newid = Util.removeComma(category.getId());
+		category.setId(newid);
+	
+		categoryDAO.saveOrUpdate(category);
+	/*model.addAttribute("category", category);
+	model.addAttribute("categoryList", this.categoryDAO.list());*/
+	return "redirect:/category";
+    }
+
+	
+	
+	@RequestMapping("/removecategory/{id}")
+	public String deleteCategory(@PathVariable("id") String id, ModelMap model)
+	
+	{
+		System.out.println("delete");
+		categoryDAO.delete(id);
+		return "redirect:/category";
+	}
+	
+	
+	@RequestMapping("/editcategory/{id}")
+	public String editCategory(@PathVariable("id")String id, Model model)
+	{
+		model.addAttribute("category",this.categoryDAO.get(id));
+		/*model.addAttribute("category", category);*/
+		model.addAttribute("categoryList", this.categoryDAO.list());
+		
+		return "category";
+	}
+		
+}

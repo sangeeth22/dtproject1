@@ -12,7 +12,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 <style>
-.row
+.row1
 {
 
   bottom: 0;
@@ -45,7 +45,7 @@ padding-bottom: 1px;
 </head>
 <body>
 <footer class="container-fluid text-center">
- <div class="row">
+ <div class="row1">
     <h4><div class="col-sm-2" style="background-color:lavender;">&copy copyrights reserved</div>
     <div class="col-sm-6" style="background-color:lavender;"><span class="glyphicon glyphicon-envelope"> <b>mail</b>:public@bookstore.in</span> </div>
     <div class="col-sm-4" style="background-color:lavender;">

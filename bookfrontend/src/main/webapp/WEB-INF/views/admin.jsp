@@ -1,6 +1,8 @@
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -26,14 +28,18 @@
     
     <ul class="nav navbar-nav">
       <li class="active"><a href="index">Home</a></li>
-      <li><a href="addcategory">Manage category</a></li>      
-      <li><a href="addproduct">Manage product</a></li> 
-      <li><a href="addsupplier">Manage supplier</a></li> 
+      <li><a href="category">Manage category</a></li>      
+      <li><a href="product">Manage product</a></li> 
+      <li><a href="supplier">Manage supplier</a></li> 
     </ul>
 <ul class="nav navbar-nav navbar-right">
-      <li><a href="registration"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="index"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
-    </ul>
+				<c:if test="${empty SuccessMessage}">
+				</c:if>
+				<c:if test="${not empty SuccessMessage}">
+					<li><a href="logout">Logout<span
+							class="glyphicon glyphicon-log-out"></span></a></li>
+				</c:if>
+			</ul>
   </div>
 </nav>
 </body>

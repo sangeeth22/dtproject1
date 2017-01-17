@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>crudappbackend</name>
+	<name>bookbackend</name>
 	<comment></comment>
 	<projects>
+		<project>bookfrontend</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

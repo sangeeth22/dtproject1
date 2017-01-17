@@ -1,7 +1,7 @@
-
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+ <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -25,7 +25,7 @@
     
     
     <ul class="nav navbar-nav">
-      <li class="active"><a href="index">Home</a></li>
+      <li class="active"><a href="home">Home</a></li>
       <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">our product
         <span class="caret"></span></a>
@@ -39,10 +39,22 @@
       <li><a href="aboutus">About us</a></li> 
       <li><a href="contactus">Contact us</a></li> 
     </ul>
-<ul class="nav navbar-nav navbar-right">
-      <li><a href="registration"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
+    <ul class="nav navbar-nav navbar-right">
+				<c:if test="${empty SuccessMessage}">
+				<li><a href="register">Register<span class="glyphicon glyphicon-user"></span></a></li>
+				<%--/*data-toggle="modal" data-target="#login-modal"*/ --%>
+					<li><a href="login">Sign
+							in <span class="glyphicon glyphicon-log-in"></span>
+					</a></li>
+				</c:if>
+				<c:if test="${not empty SuccessMessage}">
+					<li><a href="#">My Cart<span
+							class="glyphicon glyphicon-shopping-cart"></span></a></li>
+					<li><a href="logout">Logout<span
+							class="glyphicon glyphicon-log-out"></span></a></li>
+				</c:if>
+			</ul>
+
   </div>
 </nav>
 </body>
