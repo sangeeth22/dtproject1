@@ -12,9 +12,21 @@
 <script src="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 <title>contact us</title>
+<style>
+ .bg{
+	background-image: url("http://www.1wallpaperhd.com/wp-content/uploads/Cute/FTP1/1280x720/Blackboards%20and%20books%20Wallpapers%20HD%201280x720.jpg");
+	background-size:100%;
+}
+.entry-content
+{
+padding-left: 25px;
+}
+
+</style>
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
+<div class=bg>
 <h1 class="entry-title">Contact</h1>
 <div class="entry-content">
 <p><strong>book store Ltd</strong><br />
@@ -42,7 +54,7 @@ Tel: +44 28 56 92 5</p>
 <br/>
 <br/>
 </div>
-
+</div>
 
 <jsp:include page="footer.jsp"></jsp:include>
 </body>

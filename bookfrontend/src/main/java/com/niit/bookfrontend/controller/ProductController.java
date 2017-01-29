@@ -97,11 +97,162 @@ public String editProduct(@PathVariable("id")String id, Model model)
 
 	return "product";
 }
-
-@RequestMapping("/mobile_products")
-public String phone(){
-	return "mobile_product";
-	}
+@RequestMapping(value="/categoryDropdown")
+public String categoryView(Model model)
+{
+	System.out.println("inside categoryDropdown");
+	model.addAttribute("listCategory",categoryDAO.list());
+	model.addAttribute("productList",productDAO.list());
+	return "categoryDropdown";
+}
+@RequestMapping(value="/categoryDropdown/{id}")
+public String productView(@PathVariable("id") String id,Model model)
+{
+	
+	System.out.println("inside productGetByCategoryId");
+	model.addAttribute("listCategory",categoryDAO.list());
+	model.addAttribute("productList",productDAO.getProductbyCategoryId(id));
+	
+	return "categoryDropdown";
+}
+@RequestMapping(value="/categoryDropdown/categoryDropdown/{id}")
+public String productView2(@PathVariable("id") String id,Model model)
+{
+	model.addAttribute("id",id);
+	
+	return "redirect:/categoryDropdown/{id}";
+}
+@RequestMapping(value="categoryDropdown/categoryDropdown/productDisplay/{id}")
+public String productDisplay(@PathVariable("id") String id,Model model)
+{
+	
+	
+	model.addAttribute("product",productDAO.getProductById(id));
+	
+	return "productDisplay";
+}
+@RequestMapping(value="/productDisplay/{id}")
+public String productDisplay2(@PathVariable("id") String id,Model model)
+{
+	
+	
+	model.addAttribute("product",productDAO.getProductById(id));
+	
+	return "productDisplay";
+}
+@RequestMapping(value="/productDisplay/categoryback")
+public String categoryback3()
+{
+	return "redirect:/categoryDropdown";
+}
+@RequestMapping(value="/productDisplay/aboutus")
+public String Aboutus2()
+{
+	return "redirect:/aboutus";
+}
+@RequestMapping(value="/categoryDropdown/categoryback")
+public String categoryback()
+{
+	return "redirect:/categoryDropdown";
+}
+@RequestMapping(value="/categoryDropdown/productDisplay/categoryback")
+public String productback()
+{
+	return "redirect:/categoryDropdown";
+}
+@RequestMapping(value="/categoryDropdown/productDisplay/Cart")
+public String cartback()
+{
+	return "redirect:/Cart";
+}
+@RequestMapping(value="/categoryDropdown/productDisplay/register")
+public String registerback()
+{
+	return "redirect:/Register";
+}@RequestMapping(value="/categoryDropdown/productDisplay/logout")
+public String logoutback()
+{
+	
+	
+	return "redirect:/logout";
+}@RequestMapping(value="/categoryDropdown/categoryDropdown/productDisplay/login")
+public String loginback()
+{
+	return "redirect:/login";
+}
+@RequestMapping(value="/categoryDropdown/login")
+public String login2back()
+{
+	return "redirect:/login";
+}
+@RequestMapping(value="/categoryDropdown/logout")
+public String logout2back()
+{
+	return "redirect:/logout";
+}
+@RequestMapping(value="/categoryDropdown/register")
+public String register2back()
+{
+	return "redirect:/register";
+}
+@RequestMapping(value="/categoryDropdown/Cart")
+public String cart2back()
+{
+	return "redirect:/Cart";
+}
+@RequestMapping(value="/categoryDropdown/productDisplay/categoryDropdown")
+public String category2back()
+{
+	return "redirect:/categoryDropdown";
+}
+@RequestMapping(value="/categoryDropdown/categoryDropdown")
+public String category3back()
+{
+	return "redirect:/categoryDropdown";
+}
+@RequestMapping(value="/categoryDropdown/productDisplay/home")
+public String indexback()	
+{
+	return "redirect:/home";
+}
+@RequestMapping(value="/categoryDropdown/home")
+public String index2back()
+{
+	return "redirect:/home";
+}
+@RequestMapping(value="/productDisplay/Cart")
+public String cart3back()
+{
+	return "redirect:/Cart";
+}
+@RequestMapping(value="/categoryDropdown/categoryDropdown/productDisplay/logout")
+public String logoutproduct()
+{
+	return "redirect:/logout";
+}@RequestMapping(value="/categoryDropdown/categoryDropdown/productDisplay/aboutus")
+public String aboutusproduct()
+{
+	return "redirect:/aboutus";
+}@RequestMapping(value="/categoryDropdown/categoryDropdown/productDisplay/contactus")
+public String contactusproduct()
+{
+	return "redirect:/contactus";
+}
+@RequestMapping(value="/categoryDropdown/categoryDropdown/productDisplay/home")
+public String homeproduct()
+{
+	return "redirect:/home";
+}
+@RequestMapping(value="/categoryDropdown/aboutus")
+public String aboutuscategorydropdown()
+{
+	return "redirect:/aboutus";
+}
+@RequestMapping(value="/categoryDropdown/contactus")
+public String contactuscategorydropdown()
+{
+	return "redirect:/contactus";
+}
 
 }
 

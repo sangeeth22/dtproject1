@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+   
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
  <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -19,7 +21,7 @@
 <nav class="navbar navbar-inverse ">
   <div class="container-fluid">
     <div class="navbar-header">
-    <a href="index" class="pull-left"><img src="C:\Users\leo pc\Desktop\project\images\logo\book_PNG2118.png" width="70" height="50"></a>
+    <a href="index" class="pull-left"><img src="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/bookstore.png?itok=28dWpCmV" width="70" height="50"></a>
      <div class="navbar-brand">BookStore</div>
     </div>
     
@@ -30,10 +32,16 @@
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">our product
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="kids book"> kids book</a></li>
+        <c:forEach items="${categoryList}" var="category">
+		
+		
+		<li><a href="categoryDropdown/${category.id}">${category.name}</a></li>
+			
+			</c:forEach>
+          <!-- <li><a href="kids book"> kids book</a></li>
           <li><a href="youngsters and teens book"> Youngsters and teens book</a></li>
           <li><a href="text book"> Text book</a></li>
-	   
+	    -->
         </ul>
       </li>
       <li><a href="aboutus">About us</a></li> 

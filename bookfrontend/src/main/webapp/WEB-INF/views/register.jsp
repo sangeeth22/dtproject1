@@ -117,11 +117,11 @@ body {
 section{
 	padding: 3rem 0;
 }
-h1.title { 
+/* h1.title { 
 	font-size: 50px;
 	font-family: 'Passion One', cursive; 
 	font-weight: 400; 
-}
+} */
 
 hr{
 	width: 10%;
@@ -224,11 +224,15 @@ input::-webkit-input-placeholder {
 	font-size: 11px;
 	text-align: center;
 }
-
+.bg{
+	background-image: url("https://wallpaperscraft.com/image/sunglasses_books_beach_sun_110969_1920x1080.jpg");
+	background-size:100%;
+}
 </style>
 	</head>
 	<body>
 	<jsp:include page="header.jsp"></jsp:include>
+	<div class=bg>
 		<div class="container">
 			<div class="row main">
 				<div class="panel-heading">
@@ -311,6 +315,7 @@ input::-webkit-input-placeholder {
 			</div>
 		</div>
 		<br><br><br>
+		</div>
 		<jsp:include page="footer.jsp"></jsp:include>
 	</body>
 </html>

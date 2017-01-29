@@ -35,7 +35,7 @@ public class ApplicationContextConfig {
 
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 			
-		dataSource.setUrl("jdbc:h2:tcp://localhost/~/NIITDB");
+		dataSource.setUrl("jdbc:h2:tcp://localhost/~/project1");
 
 		dataSource.setDriverClassName("org.h2.Driver");
 
