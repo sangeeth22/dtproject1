@@ -155,7 +155,7 @@ public String categoryback()
 {
 	return "redirect:/categoryDropdown";
 }
-@RequestMapping(value="/categoryDropdown/productDisplay/categoryback")
+@RequestMapping(value="/categoryDropdown/categoryDropdown/productDisplay/categoryDropdown/{id}")
 public String productback()
 {
 	return "redirect:/categoryDropdown";

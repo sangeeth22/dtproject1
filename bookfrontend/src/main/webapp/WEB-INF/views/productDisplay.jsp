@@ -44,7 +44,7 @@ body {
 
 <h1 style="text-align:center;">${product.name }</h1>
 	<div style="center">
-<img src="E:\productimage\/${product.id}.jpg" class="img-responsive"width="350" height="250" />
+<img src="E:\productimage\/${product.id}.jpg" alt="" class="img-responsive"width="350" height="250" />
 						<p>Name:${product.name }</p>
 							<h4>Price:RS.${product.price}</h4>
 							
@@ -79,7 +79,6 @@ body {
 	
 			
 
-<a href="categoryback"><button type="button" class="btn btn-primary" >back to categories</button></a>
        
                 </div>
 
@@ -109,7 +108,7 @@ body {
       * removeItemFromCart method is used to remove a item from the cart
       */
      $scope.removeItemFromCart = function (id) {
-         $http.put('http://localhost:9080/kafon/removeItem/'+id).success(function (data) {
+         $http.put('http://localhost:8080/bookfrontend/removeItem/'+id).success(function (data) {
              $scope.refreshCartItems();
          });
      };
@@ -118,7 +117,7 @@ body {
       * addItemToCart method is used to add items into the cart
       */
      $scope.addItemToCart = function (id) {
-         $http.put('http://localhost:9080/kafon/categoryDropdown/productDisplay/usercart/cart/addItem/'+id).success(function (data) {
+         $http.put('http://localhost:8080/bookfrontend/categoryDropdown/productDisplay/usercart/cart/addItem/'+id).success(function (data) {
              alert("Item added to the cart!")
              
          });
@@ -141,7 +140,7 @@ body {
  	 * refreshCartItems method is called by others methods in same controller to refresh the cart
  	 */
      $scope.refreshCartItems = function () {
-         $http.get('http://localhost:9080/kafon/refreshCart/'+$scope.cartId).success(function (data) {
+         $http.get('http://localhost:8080/bookfrontend/refreshCart/'+$scope.cartId).success(function (data) {
             $scope.cart=data;
          });
      };
@@ -150,7 +149,7 @@ body {
       * clearCartItems method is used to delete all items from the cart
       */
      $scope.clearCartItems = function () {
-     	$http['delete']('http://localhost:9080/kafon/clearCartItems/'+$scope.cartId).success(function (data)
+     	$http['delete']('http://localhost:8080/bookfrontend/clearCartItems/'+$scope.cartId).success(function (data)
      			{$scope.refreshCartItems()
      		});
      };

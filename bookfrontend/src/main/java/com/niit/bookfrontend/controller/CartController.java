@@ -30,7 +30,7 @@ import com.niit.bookbackend.model.UserDetails;
 //All functionality related to user cart is written in this controller.
 
 @Controller
-@RequestMapping("/usercart/cart")
+@RequestMapping("/categoryDropdown/productDisplay/usercart/cart")
 public class CartController {
 
     @Autowired
