@@ -16,7 +16,7 @@
 <title>${category.name}</title>
 <style>
 body {
-	background-image: url("");
+	background-image: url("http://cdn.wallpapersafari.com/2/33/eLN2hs.jpg");
 	background-repeat: no-repeat;
 	background-size:200%;
 }
@@ -24,38 +24,23 @@ body {
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
-<!-- Page Content -->
-    <div class="container">
-
-        <div class="row">
-
-            <div class="col-md-3">
-                <p class="lead">BOOK STORE</p>
-                <div class="list-group">
-                    <a href="kids book" class="list-group-item">Kids</a>
-                    <a href="youngsters and teens book" class="list-group-item">Youngsters and Teens</a>
-                    <a href="text book" class="list-group-item">Text Book</a>
-                </div>
-            </div>
-   <div class="col-md-9">
-   <div class="row">
-<h2 style="text-align:center;">Product Discription</h2>
+<h2 style="text-align:center;">Product View</h2>
 <div ng-app = "addToCartApp" ng-controller="addToCartCtrl"> 
 
 <h1 style="text-align:center;">${product.name }</h1>
-	<div style="center">
-<img src="E:\productimage\/${product.id}.jpg" alt="" class="img-responsive"width="350" height="250" />
+	<div style="margin-left:500px">
+<img src="D:\bookImages\/${product.id}.jpg" class="img-responsive" />
 						<p>Name:${product.name }</p>
 							<h4>Price:RS.${product.price}</h4>
 							
 							<p>Description:${product.description }</p>
 							
 					
-					<c:if test="${empty SuccessMessage}">
-					<a href="login"><button class="btn btn-primary">login to add to cart
+					<c:if test="${empty successlogin}">
+					<a href="Login"><button class="btn btn-primary">login to add to cart
 											</button></a>
 					</c:if>	
-					<c:if test="${not empty SuccessMessage}">	
+					<c:if test="${not empty successlogin}">	
 									<button class="btn btn-primary"
 										   ng-click="addItemToCart('${product.id}')"><span
 												class="glyphicon glyphicon-shopping-cart"></span>Add to cart
@@ -79,15 +64,7 @@ body {
 	
 			
 
-       
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-    <!-- /.container -->
+<a href="categoryback"><button type="button" class="btn btn-primary" >back to categories</button></a>
  <script>
  
 
@@ -108,7 +85,7 @@ body {
       * removeItemFromCart method is used to remove a item from the cart
       */
      $scope.removeItemFromCart = function (id) {
-         $http.put('http://localhost:8080/bookfrontend/removeItem/'+id).success(function (data) {
+         $http.put('http://localhost:9080/kafon/removeItem/'+id).success(function (data) {
              $scope.refreshCartItems();
          });
      };
@@ -117,7 +94,7 @@ body {
       * addItemToCart method is used to add items into the cart
       */
      $scope.addItemToCart = function (id) {
-         $http.put('http://localhost:8080/bookfrontend/categoryDropdown/productDisplay/usercart/cart/addItem/'+id).success(function (data) {
+         $http.put('http://localhost:9080/kafon/categoryDropdown/productDisplay/usercart/cart/addItem/'+id).success(function (data) {
              alert("Item added to the cart!")
              
          });
@@ -140,7 +117,7 @@ body {
  	 * refreshCartItems method is called by others methods in same controller to refresh the cart
  	 */
      $scope.refreshCartItems = function () {
-         $http.get('http://localhost:8080/bookfrontend/refreshCart/'+$scope.cartId).success(function (data) {
+         $http.get('http://localhost:9080/kafon/refreshCart/'+$scope.cartId).success(function (data) {
             $scope.cart=data;
          });
      };
@@ -149,7 +126,7 @@ body {
       * clearCartItems method is used to delete all items from the cart
       */
      $scope.clearCartItems = function () {
-     	$http['delete']('http://localhost:8080/bookfrontend/clearCartItems/'+$scope.cartId).success(function (data)
+     	$http['delete']('http://localhost:9080/kafon/clearCartItems/'+$scope.cartId).success(function (data)
      			{$scope.refreshCartItems()
      		});
      };

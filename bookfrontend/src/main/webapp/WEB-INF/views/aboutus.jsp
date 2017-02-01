@@ -28,7 +28,7 @@ As a global Book publisher, Book store site offers a wide range of over 1000 tex
           </p>
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" src="http://kingofwallpapers.com/book-wallpapers/book-wallpapers-013.jpg" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive center-block" src="C:\Users\leo pc\Desktop\project\images\logo\reading-improvement.png" alt="Generic placeholder image">
         </div>
      
       </div>

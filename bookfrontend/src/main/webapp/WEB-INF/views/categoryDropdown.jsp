@@ -77,7 +77,7 @@
                             <img src="E:\productimage\/${product.id}.jpg" alt="">
                             <div class="caption">
                                 <h4 class="pull-right">RS.${product.price}</h4>
-                                <h4><a href="categoryDropdown/productDisplay/${product.id}">${product.name }</a>
+                                <h4><a href="">${product.name }</a>
                                 </h4>
 <!--                                 <p>This is a short description.This jumbo book of alphabets use to learn alphabets for kids .</p> -->
                             </div>

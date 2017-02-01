@@ -149,14 +149,10 @@
 		});
 </script>
 		<style>
-		.bg{
-	background-image: url("https://wallpaperscraft.com/image/books_toys_shelf_67634_1920x1080.jpg");
-	background-size:100%;
-}
 body, html{
      height: 100%;
  	background-repeat: no-repeat;
- 	background: url()no-repeat center center fixed; 
+ 	background: url(http:///wp-content/uploads/2014/09/blue-wallpaper-36.jpg)no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -175,11 +171,11 @@ body {
 section{
 	padding: 3rem 0;
 }
-/* h1.title { 
+h1.title { 
 	font-size: 50px;
 	font-family: 'Passion One', cursive; 
-	font-weight: 400;  
-}*/
+	font-weight: 400; 
+}
 
 hr{
 	width: 10%;
@@ -255,12 +251,11 @@ input::-webkit-input-placeholder {
 	</head>
 	<body>
 	<jsp:include page="header.jsp"></jsp:include>
-	<div class=bg>
 		<div class="container">
 			<div class="row main">
 				<div class="panel-heading">
 	               <div class="panel-title text-center">
-	               		<h1 class="title">login</h1>
+	               		<h1 class="title">Book Store</h1>
 	               		<hr />
 	               	</div>
 	            </div> 
@@ -290,24 +285,7 @@ input::-webkit-input-placeholder {
 					</form>
 				</div>
 			</div>
-		</div>
-		<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
-		</div>
-		
+		</div><br><br><br>
 		<jsp:include page="footer.jsp"></jsp:include>
 	</body>
 </html>

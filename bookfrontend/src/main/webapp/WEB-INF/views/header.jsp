@@ -21,7 +21,7 @@
 <nav class="navbar navbar-inverse ">
   <div class="container-fluid">
     <div class="navbar-header">
-    <a href="index" class="pull-left"><img src="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/bookstore.png?itok=28dWpCmV" width="70" height="50"></a>
+    <a href="index" class="pull-left"><img src="C:\Users\leo pc\Desktop\project\images\logo\book_PNG2118.png" width="70" height="50"></a>
      <div class="navbar-brand">BookStore</div>
     </div>
     
@@ -40,7 +40,7 @@
 			</c:forEach>
           <!-- <li><a href="kids book"> kids book</a></li>
           <li><a href="youngsters and teens book"> Youngsters and teens book</a></li>
-          <li><a href="text book"> Text book</a></li>
+          <li><a href="categoryDropdown"> Text book</a></li>
 	    -->
         </ul>
       </li>
@@ -56,7 +56,7 @@
 					</a></li>
 				</c:if>
 				<c:if test="${not empty SuccessMessage}">
-					<li><a href="Cart">My Cart<span
+					<li><a href="#">My Cart<span
 							class="glyphicon glyphicon-shopping-cart"></span></a></li>
 					<li><a href="logout">Logout<span
 							class="glyphicon glyphicon-log-out"></span></a></li>

@@ -39,19 +39,19 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="https://wallpaperscraft.com/image/book_glasses_lenses_frames_67559_1920x1080.jpg" alt="book" width="450 pixel" height="400 pixel">
+        <img src="C:\Users\leo pc\Desktop\project\images\caurosal\1.jpg" alt="book" width="450 pixel" height="400 pixel">
       </div>
 
       <div class="item">
-        <img src="https://wallpaperscraft.com/image/book_lies_sofa_library_68253_1920x1080.jpg" alt="book" width="450 pixel" height="400 pixel">
+        <img src="C:\Users\leo pc\Desktop\project\images\caurosal\2.jpg" alt="book" width="450 pixel" height="400 pixel">
       </div>
     
       <div class="item">
-        <img src="https://wallpaperscraft.com/image/book_bed_alarm_clock_reading_39622_1920x1080.jpg" alt="book" width="450 pixel" height="400 pixel">
+        <img src="C:\Users\leo pc\Desktop\project\images\caurosal\3.jpg" alt="book" width="450 pixel" height="400 pixel">
       </div>
 
       <div class="item">
-        <img src="https://wallpaperscraft.com/image/book_reading_inspiration_113238_1920x1080.jpg" alt="book" width="450 pixel" height="400 pixel">
+        <img src="C:\Users\leo pc\Desktop\project\images\caurosal\4.jpg" alt="book" width="450 pixel" height="400 pixel">
       </div>
     </div>
 
@@ -75,13 +75,13 @@
       <!-- Three columns of text below the carousel -->
       <div class="w">
         <div class="col-lg-4">
-          <img class="img-circle" src="http://davistownrsl.com.au/wp-content/uploads/2014/10/kidsparties.jpg" alt="Generic placeholder image" width="140" height="140">
+          <img class="img-circle" src="C:\Users\leo pc\Desktop\project\images\logo\kids.jpg" alt="Generic placeholder image" width="140" height="140">
           <h2>kids book</h2>
           <p>In this kids category you can find many varities of kids book</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="https://images-na.ssl-images-amazon.com/images/G/01/img17/books/content-grid/1023281_us_books_col3_cg_youngadult_400x350.jpg" alt="Generic placeholder image" width="140" 
+          <img class="img-circle" src="C:\Users\leo pc\Desktop\project\images\logo\youngters and adult book.jpg" alt="Generic placeholder image" width="140" 
 
 height="140">
           <h2>youngsters and teens book</h2>
@@ -89,7 +89,7 @@ height="140">
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="http://www.cpa.ednet.ns.ca/wp-content/uploads/2015/01/zzzTextbook-Button3.jpg" alt="Generic placeholder image" width="140" height="140">
+          <img class="img-circle" src="C:\Users\leo pc\Desktop\project\images\logo\text book.jpg" alt="Generic placeholder image" width="140" height="140">
           <h2>text book</h2>
           <p>In this text book category you can find many varities of text book</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
@@ -122,7 +122,7 @@ initiatives worldwide. With more than 8 million new and used titles in stock, we
 environmental value for all our stakeholders.</p>
         </div>
         <div class="col-md-5 col-md-pull-7">
-          <img class="featurette-image img-responsive center-block" src="https://wallpaperscraft.com/image/book_flower_rose_dry_petals_76956_1920x1080.jpg" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive center-block" src="C:\Users\leo pc\Desktop\project\images\logo\reading-a-book.jpg" alt="Generic placeholder image">
         </div>
       </div>
 
@@ -135,11 +135,10 @@ environmental value for all our stakeholders.</p>
 Mishawaka is carbon balanced with Green-e Climate certified offsets from 3Degrees, a leading green power and carbon balancing services firm.</p>
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" src="https://wallpaperscraft.com/image/book_bokeh_page_bookmark_heart_82208_1920x1080.jpg" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive center-block" src="C:\Users\leo pc\Desktop\project\images\logo\reading-improvement.png" alt="Generic placeholder image">
         </div>
       </div>
 </div>>
-
      
 
       <!-- /END THE FEATURETTES -->

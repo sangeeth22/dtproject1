@@ -122,7 +122,7 @@ public String productView2(@PathVariable("id") String id,Model model)
 	
 	return "redirect:/categoryDropdown/{id}";
 }
-@RequestMapping(value="categoryDropdown/categoryDropdown/productDisplay/{id}")
+@RequestMapping(value="/categoryDropdown/productDisplay/{id}")
 public String productDisplay(@PathVariable("id") String id,Model model)
 {
 	
@@ -145,17 +145,17 @@ public String categoryback3()
 {
 	return "redirect:/categoryDropdown";
 }
-@RequestMapping(value="/productDisplay/aboutus")
+@RequestMapping(value="/productDisplay/Aboutus")
 public String Aboutus2()
 {
-	return "redirect:/aboutus";
+	return "redirect:/Aboutus";
 }
 @RequestMapping(value="/categoryDropdown/categoryback")
 public String categoryback()
 {
 	return "redirect:/categoryDropdown";
 }
-@RequestMapping(value="/categoryDropdown/categoryDropdown/productDisplay/categoryDropdown/{id}")
+@RequestMapping(value="/categoryDropdown/productDisplay/categoryback")
 public String productback()
 {
 	return "redirect:/categoryDropdown";
@@ -165,35 +165,33 @@ public String cartback()
 {
 	return "redirect:/Cart";
 }
-@RequestMapping(value="/categoryDropdown/productDisplay/register")
+@RequestMapping(value="/categoryDropdown/productDisplay/Register")
 public String registerback()
 {
 	return "redirect:/Register";
-}@RequestMapping(value="/categoryDropdown/productDisplay/logout")
+}@RequestMapping(value="/categoryDropdown/productDisplay/Logout")
 public String logoutback()
 {
-	
-	
-	return "redirect:/logout";
-}@RequestMapping(value="/categoryDropdown/categoryDropdown/productDisplay/login")
+	return "redirect:/Logout";
+}@RequestMapping(value="/categoryDropdown/productDisplay/Login")
 public String loginback()
 {
-	return "redirect:/login";
+	return "redirect:/Login";
 }
-@RequestMapping(value="/categoryDropdown/login")
+@RequestMapping(value="/categoryDropdown/Login")
 public String login2back()
 {
-	return "redirect:/login";
+	return "redirect:/Login";
 }
-@RequestMapping(value="/categoryDropdown/logout")
+@RequestMapping(value="/categoryDropdown/Logout")
 public String logout2back()
 {
-	return "redirect:/logout";
+	return "redirect:/Logout";
 }
-@RequestMapping(value="/categoryDropdown/register")
+@RequestMapping(value="/categoryDropdown/Register")
 public String register2back()
 {
-	return "redirect:/register";
+	return "redirect:/Register";
 }
 @RequestMapping(value="/categoryDropdown/Cart")
 public String cart2back()
@@ -210,48 +208,20 @@ public String category3back()
 {
 	return "redirect:/categoryDropdown";
 }
-@RequestMapping(value="/categoryDropdown/productDisplay/home")
+@RequestMapping(value="/categoryDropdown/productDisplay/index")
 public String indexback()	
 {
-	return "redirect:/home";
+	return "redirect:/index";
 }
-@RequestMapping(value="/categoryDropdown/home")
+@RequestMapping(value="/categoryDropdown/index")
 public String index2back()
 {
-	return "redirect:/home";
+	return "redirect:/index";
 }
 @RequestMapping(value="/productDisplay/Cart")
 public String cart3back()
 {
 	return "redirect:/Cart";
-}
-@RequestMapping(value="/categoryDropdown/categoryDropdown/productDisplay/logout")
-public String logoutproduct()
-{
-	return "redirect:/logout";
-}@RequestMapping(value="/categoryDropdown/categoryDropdown/productDisplay/aboutus")
-public String aboutusproduct()
-{
-	return "redirect:/aboutus";
-}@RequestMapping(value="/categoryDropdown/categoryDropdown/productDisplay/contactus")
-public String contactusproduct()
-{
-	return "redirect:/contactus";
-}
-@RequestMapping(value="/categoryDropdown/categoryDropdown/productDisplay/home")
-public String homeproduct()
-{
-	return "redirect:/home";
-}
-@RequestMapping(value="/categoryDropdown/aboutus")
-public String aboutuscategorydropdown()
-{
-	return "redirect:/aboutus";
-}
-@RequestMapping(value="/categoryDropdown/contactus")
-public String contactuscategorydropdown()
-{
-	return "redirect:/contactus";
 }
 
 }
