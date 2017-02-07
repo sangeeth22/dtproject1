@@ -10,7 +10,7 @@ import com.niit.bookbackend.dao.UserDAO;
 import com.niit.bookbackend.model.UserDetails;
 
 	@Controller
-	@RequestMapping("/user/cart")
+	@RequestMapping("/categoryDropdown/productDisplay/usercart/cart")
 	public class UserCartController {
 
 	    @Autowired

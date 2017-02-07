@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 //import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.niit.bookbackend.dao.CategoryDAO;
 import com.niit.bookbackend.dao.UserDAO;
 import com.niit.bookbackend.model.UserDetails;
 
@@ -26,6 +27,8 @@ import com.niit.bookbackend.model.UserDetails;
 		UserDetails userDetails;
 		@Autowired(required=true)
 		UserDAO userDAO;
+		@Autowired
+		CategoryDAO categoryDAO;
 		@RequestMapping("/")
 		public String gotohome()
 		{
@@ -33,8 +36,10 @@ import com.niit.bookbackend.model.UserDetails;
 					
 		}
 		@RequestMapping("/home")
-		public String home()
+		public String home(Model model)
 		{
+		
+			model.addAttribute("categoryList",this.categoryDAO.list());
 			return "home";
 		}
 		@RequestMapping("/under_construction")

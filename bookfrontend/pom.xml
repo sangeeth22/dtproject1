@@ -106,6 +106,6 @@
 </dependency>
   </dependencies>
   <build>
-    <finalName>SuggestionCartFrontEnd</finalName>
+    <finalName>bookfrontend</finalName>
   </build>
 </project>

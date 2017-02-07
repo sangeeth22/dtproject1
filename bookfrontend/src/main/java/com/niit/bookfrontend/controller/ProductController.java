@@ -163,7 +163,7 @@ public String productback()
 @RequestMapping(value="/categoryDropdown/productDisplay/Cart")
 public String cartback()
 {
-	return "redirect:/Cart";
+	return "Cart";
 }
 @RequestMapping(value="/categoryDropdown/productDisplay/Register")
 public String registerback()

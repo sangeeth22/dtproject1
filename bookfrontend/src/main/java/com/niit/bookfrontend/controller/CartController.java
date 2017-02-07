@@ -1,3 +1,4 @@
+
 package com.niit.bookfrontend.controller;
 
 
@@ -30,7 +31,7 @@ import com.niit.bookbackend.model.UserDetails;
 //All functionality related to user cart is written in this controller.
 
 @Controller
-@RequestMapping("/usercart/cart")
+@RequestMapping("/categoryDropdown/productDisplay/usercart/cart")
 public class CartController {
 
     @Autowired
@@ -54,7 +55,7 @@ public class CartController {
      //addItem method is used to add a item in user cart.
      
 
-    @RequestMapping(value = "/addItem/{id}", method = RequestMethod.PUT)
+    @RequestMapping(value = "/categoryDropdown/productDisplay/usercart/cart/addItem/{id}", method = RequestMethod.PUT)
     @ResponseStatus(value = HttpStatus.NO_CONTENT)
     public void addItem (@PathVariable(value ="id") String id, Principal username) {
 

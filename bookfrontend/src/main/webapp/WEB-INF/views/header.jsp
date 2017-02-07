@@ -56,7 +56,7 @@
 					</a></li>
 				</c:if>
 				<c:if test="${not empty SuccessMessage}">
-					<li><a href="#">My Cart<span
+					<li><a href="usercart/cart">My Cart<span
 							class="glyphicon glyphicon-shopping-cart"></span></a></li>
 					<li><a href="logout">Logout<span
 							class="glyphicon glyphicon-log-out"></span></a></li>
