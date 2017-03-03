@@ -288,7 +288,7 @@ input::-webkit-input-placeholder {
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="glyphicon glyphicon-phone" aria-hidden="true"></i></span>
-									<input id="phone" class="form-control" type="text" name="phone" placeholder="Phone Number" onkeyup="validatephone(this);"required/> 
+									<input id="phone" class="form-control" type="text" name="phone" placeholder="Phone Number" onkeyup="validatephone(this);"pattern="[7-9]{1}[0-9]{9}"required/> <span>Example format:7895213640</span>
 <!-- 								<input name="mobile"  id="mobile" type="number" required onkeyup="check(); return false;" ><span id="message"></span>
  -->								
 								</div>
