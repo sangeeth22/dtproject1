@@ -124,9 +124,10 @@ background-color: #661a00;
              <a href="<spring:url value="/" />" class="btn btn-primary center">Continue Shopping</a>
 			</div>	
 			<div class="span3">
-             <a href="<spring:url value="/billingAddress"/>"
+			<a href="startFlow">check out</a>
+             <%-- <a href="<spring:url value="/billingAddress"/>"
                    class="btn btn-success center"><span class="glyphicon-shopping-cart glyphicon"></span> Check out
-                </a>
+                </a> --%>
 			</div>	  
 			<div class="span2">
            <a class="btn btn-danger center" ng-click="clearCartItems()"><span

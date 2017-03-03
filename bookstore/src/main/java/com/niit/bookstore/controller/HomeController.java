@@ -109,6 +109,12 @@ import com.niit.bookstore.model.UserDetails;
 		{
 			return "redirect:/Aboutus";
 		}  
+		@RequestMapping("/startFlow")
+		public String initiateFlow()
+		{
+			return "redirect:/demoFlow";
+		}
+		
 	 
 	}
 

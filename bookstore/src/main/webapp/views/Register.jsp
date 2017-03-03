@@ -70,18 +70,40 @@ function email_validate(EmailId) {
 	}
 }
 function validatephone(phone) {
-	var maintainplus = '';
+	{
+
+	    var pass1 = document.getElementById('phone');
+
+
+	    var message = document.getElementById('message');
+
+	  /*  var goodColor = "#0C6";
+	    var badColor = "#FF9B37"; */
+
+	    if(phone.value.length!=10){
+
+	        /* phone.style.backgroundColor = badColor;
+	        phone.style.color = badColor; */
+	        message.innerHTML = "required 10 digits, match requested format!"
+	    }else{
+	    	message.innerHTML="phone number is valid"
+	    }
+	    }
+	
+	/* var maintainplus = '';
 	var numval = phone.value
 	if (numval.charAt(0) == '+') {
 		var maintainplus = '';
 	}
+	
+	
 	curphonevar = numval.replace(
 			/[\\A-Za-z!"£$%^&\,*+_={};:'@#~,.Š\/<>?|`¬\]\[]/g, '');
 	phone.value = maintainplus + curphonevar;
 	var maintainplus = '';
 	phone.focus;
+} */
 }
-
 </script>
 <style>
 .background{
@@ -217,7 +239,7 @@ input::-webkit-input-placeholder {
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="name" id="Name" placeholder="Enter your Name"/>
+									<input type="text" class="form-control" name="name" id="Name" placeholder="Enter your Name"required/>
 								</div>
 							</div>
 						</div>
@@ -229,7 +251,7 @@ input::-webkit-input-placeholder {
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="email" id="EmailId"  placeholder="Enter your Email" onchange="email_validate(this.value);">
+									<input type="text" class="form-control" name="email" id="EmailId"  placeholder="Enter your Email" onchange="email_validate(this.value);"required/>
 								</div>
 								<div class="status" id="status"></div>
 							</div>
@@ -254,7 +276,7 @@ input::-webkit-input-placeholder {
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-									<input type="password" class="form-control" name="password" id="Password" placeholder="Enter your Password" required data-toggle="popover" title="Password Strength" data-content="Enter Password....">
+									<input type="password" class="form-control" name="password" id="Password" placeholder="Enter your Password" required data-toggle="popover" title="Password Strength" data-content="Enter Password...."required/>
 								</div>
 							</div>
 						</div>
@@ -266,7 +288,9 @@ input::-webkit-input-placeholder {
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="glyphicon glyphicon-phone" aria-hidden="true"></i></span>
-									<input id="phone" class="form-control" type="text" name="phone" placeholder="Phone Number" required maxlength="10" onkeyup="validatephone(this);"> 
+									<input id="phone" class="form-control" type="text" name="phone" placeholder="Phone Number" onkeyup="validatephone(this);"required/> 
+<!-- 								<input name="mobile"  id="mobile" type="number" required onkeyup="check(); return false;" ><span id="message"></span>
+ -->								
 								</div>
 							</div>
 						</div>

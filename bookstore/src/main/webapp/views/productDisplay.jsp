@@ -32,9 +32,9 @@ font-family: monotype corsiva;
             <div class="col-md-3">
                 <p class="lead">BOOK STORE</p>
                 <div class="list-group">
-                    <a href="kids book" class="list-group-item">Kids</a>
-                    <a href="youngsters and teens book" class="list-group-item">Youngsters and Teens</a>
-                    <a href="text book" class="list-group-item">Text Book</a>
+                    <a href="categoryDropdown/101" class="list-group-item">Kids</a>
+                    <a href="categoryDropdown/102" class="list-group-item">Youngsters and Teens</a>
+                    <a href="categoryDropdown/103" class="list-group-item">Text Book</a>
                 </div>
             </div>
    <div class="col-md-9">
