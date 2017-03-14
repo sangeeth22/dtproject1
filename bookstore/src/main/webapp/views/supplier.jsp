@@ -5,6 +5,8 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -34,7 +36,7 @@ font-weight: bold;
 	<div class="container">
 	<h1 style="font-family:monotype corsiva; color:#000000;"><b>SUPPLIER</b></h1>
 
-	<c:url var="addAction" value="/addsupplier"></c:url>
+ <c:url var="addAction" value="/addsupplier"></c:url>
 
 	<form:form action="${addAction}" commandName="supplier">
 		<table style="width:50%">
@@ -78,8 +80,11 @@ font-weight: bold;
 	</div>
 	<br>
 	<h3 style="font-family:monotype corsiva; color:#000000;"><b>SUPPLIER LIST</b></h3>
-	<c:if test="${!empty supplierList}">
-		<table class="tg">
+	<div ng-app="repeatSample" ng-controller="SupplierController">
+  <br/><br/>
+  Search:<input type=text placeholder="Search" ng-model="searchText"/>
+<%-- 	<c:if test="${!empty supplierList}">
+ --%>		<table class="tg">
 			<tr>
 				<th width="80">Supplier ID</th>
 				<th width="120">Supplier Name</th>
@@ -87,16 +92,42 @@ font-weight: bold;
 				<th width="60">Edit</th>
 				<th width="60">Delete</th>
 			</tr>
-			<c:forEach items="${supplierList}" var="supplier">
-				<tr>
+<%-- 			<c:forEach items="${supplierList}" var="supplier">
+ --%>			
+  <tr class="success" ng-repeat="sup in supplier|filter:searchText">
+			
+ 	<td >{{sup.id}}</td>
+ 	<td>{{sup.name}}</td>
+ 	<td>{{sup.address}}</td>
+ 	<td ><a href="editsupplier/?id={{sup.id}}">Edit</a></td>
+	<td><a href="removesupplier/?id={{sup.id}}">Delete</a></td>
+ </tr>
+				<%-- <tr>
 					<td>${supplier.id}</td>
 					<td>${supplier.name}</td>
 					<td>${supplier.address}</td>
 					<td><a href="<c:url value='editsupplier/${supplier.id}' />">Edit</a></td>
 					<td><a href="<c:url value='removesupplier/${supplier.id}' />">Delete</a></td>
+				</tr> --%>
 				</tr>
-			</c:forEach>
+		<%-- 	</c:forEach> --%>
 		</table>
-	</c:if>
+<%-- 	</c:if>
+ --%>	</div>
+	<script>
+  var prod = ${supplierList}; 
+  angular.module('repeatSample',[]).controller('SupplierController', function($scope)  
+   {
+          $scope.supplier=prod;  
+          $scope.sort = function(keyname)
+          {
+              $scope.sortKey = keyname;   //set the sortKey to the param passed
+              $scope.reverse = !$scope.reverse; //if true make it false and vice versa
+          }
+              
+   
+              
+    });
+</script>
 </body>
 </html>

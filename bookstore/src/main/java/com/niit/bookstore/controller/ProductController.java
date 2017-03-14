@@ -32,7 +32,7 @@ public class ProductController {
 	@Autowired(required=true)
 	private SupplierDAO supplierDAO;
 	
-    String path="E:\\image\\";
+    String path="C:\\Users\\leo pc\\Desktop\\project\\jeni\\choco\\src\\main\\resources\\";
 	
 	@RequestMapping(value="/product")
 	public String listProduct(Model model)

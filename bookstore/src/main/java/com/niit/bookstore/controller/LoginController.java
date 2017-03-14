@@ -70,7 +70,7 @@ String username = SecurityContextHolder.getContext().getAuthentication().getName
 		
 		 if (authority.getAuthority().equals(role)) 
 	     {
-			 session.setAttribute("successlogin", "successfully logged in");
+			 session.setAttribute("successlogin", "successfully logged in...");
 	    	 session.setAttribute("categoryList",categoryDAO.list());
 	    	 session.setAttribute("supplierList",supplierDAO.list());
 	    	 session.setAttribute("productList",productDAO.list());
@@ -92,6 +92,7 @@ String username = SecurityContextHolder.getContext().getAuthentication().getName
 	    	 break;
 	    }
 		}
+		 
 		 return page;
 		}
 

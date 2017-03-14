@@ -43,7 +43,7 @@ font-family: monotype corsiva;
                 <div class="row">
 <h1 style="text-align:center;">${product.name }</h1>
 	<div style="margin-left:5px">
-<img src="E:\image\/${product.id}.jpg" class="img-responsive"  height="300px" width="300px" />
+<img src="${product.image_link}.jpg" class="img-responsive"  height="300px" width="300px" />
 
 
 						<h3>Name:${product.name }</h3>

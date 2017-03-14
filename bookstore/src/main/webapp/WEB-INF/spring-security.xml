@@ -28,7 +28,7 @@
 <security:intercept-url access="permitAll" pattern="/Login"/>
 <security:intercept-url access="permitAll" pattern="/Register"/>
 <security:intercept-url access="permitAll" pattern="/Productview"/>
-<security:form-login authentication-success-forward-url="/loginsuccess" authentication-failure-url="/Login" login-processing-url="/perform_login" default-target-url="/Login"/>
+<security:form-login authentication-success-forward-url="/loginsuccess" authentication-failure-url="/loginFailure" login-processing-url="/perform_login" default-target-url="/Login"/>
 <security:logout logout-success-url="/" invalidate-session="true" logout-url="/Logout"/>
 <security:csrf disabled="true"/>
 </security:http>

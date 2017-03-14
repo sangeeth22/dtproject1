@@ -65,8 +65,7 @@
 								<input	type="submit" name="_eventId_cancel"
 								class="btn btn-md btn-danger" value="Cancel">
 					    </form:form>
-										 
-					    
+						
 		
 </body>
 </html>

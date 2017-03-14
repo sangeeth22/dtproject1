@@ -74,7 +74,7 @@
                     
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="E:\image\/${product.id}.jpg" alt="">
+                            <img src="${product.image_link}.jpg" alt="">
                             <div class="caption">
                                 <h4 class="pull-right">RS.${product.price}</h4>
                                 <h4><a href="productDisplay/${product.id}">${product.name }</a>

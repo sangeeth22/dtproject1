@@ -75,6 +75,14 @@ import com.niit.bookstore.model.UserDetails;
 			mv.addObject("userDetails",userDetails);
 			return mv;
 		}
+		@RequestMapping("/loginFailure")
+		public ModelAndView LoginFailure()
+		{
+			System.out.println("login page");
+			ModelAndView mv=new ModelAndView("loginFailure");
+			mv.addObject("userDetails",userDetails);
+			return mv;
+		}
 		/*
 	     * Register method is used to handle user details  related functionality
 	     */

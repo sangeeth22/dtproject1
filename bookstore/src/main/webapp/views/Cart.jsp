@@ -48,7 +48,7 @@ background-color: #661a00;
 
 	<header>
 		<center>
-		<h1 style="font-family:monotype corsiva;"><img src="https://s-media-cache-ak0.pinimg.com/236x/3e/46/03/3e4603b8396702638b817a4c42c68283.jpg	" height="77" width="77" style="font-family: monotype corsiva;" /><b>bookstore</b></h1>
+		<h1 style="font-family:monotype corsiva;"><img src="https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/564985/580/386/m1/fpnw/wm0/1-.jpg?1436816495&s=36d5eceba23d9355349d47697d8069b3	" height="77" width="77" style="font-family: monotype corsiva;" /><b>bookstore</b></h1>
 	</center>
 	<nav class="navbar navbar-inverse">
 
@@ -124,7 +124,7 @@ background-color: #661a00;
              <a href="<spring:url value="/" />" class="btn btn-primary center">Continue Shopping</a>
 			</div>	
 			<div class="span3">
-			<a href="startFlow">check out</a>
+			<a href="startFlow" class="btn btn-success center"><span class="glyphicon-shopping-cart glyphicon"></span>check out</a>
              <%-- <a href="<spring:url value="/billingAddress"/>"
                    class="btn btn-success center"><span class="glyphicon-shopping-cart glyphicon"></span> Check out
                 </a> --%>
@@ -153,21 +153,21 @@ background-color: #661a00;
          $scope.refreshCartItems(cartId);
      };
      
-     
+    
      /*
       * removeItemFromCart method is used to remove a item from the cart
       */
-     $scope.removeItemFromCart = function (id) {
-         $http.put('http://localhost:8080/bookstore/categoryDropdown/productDisplay/usercart/cart/removeItem/'+id).success(function (data) {
+      $scope.removeItemFromCart = function (id) {
+         $http['delete']('http://localhost:8080/bookstore/categoryDropdown/productDisplay/usercart/cart/removeItem/'+id).success(function (data) {
              $scope.refreshCartItems();
          });
-     };
+     }; 
 
  	 /*
       * addItemToCart method is used to add items into the cart
       */
      $scope.addItemToCart = function (id) {
-         $http['delete']('http://localhost:8080/bookstore/usercart/cart/addItem/'+id).success(function (data) {
+         $http.put('http://localhost:8080/bookstore/usercart/cart/addItem/'+id).success(function (data) {
              alert("Item added to the cart!")
          });
      };

@@ -30,8 +30,22 @@ font-weight: bold;
 </head>
 <body>
 <%@ include file="Admin.jsp"%><br/><br/>
+<script>
+	var cat = ${categoryList};
+	var sell = ${supplierList};
+	
+	angular.module('repeatSample1', []).controller('reapeterController1',
+			function($scope) {
+				$scope.Category1 = cat;
+				$scope.Seller1 = sell;
+				$scope.sort = function(keyname) {
+					$scope.sortKey = keyname; //set the sortKey to the param passed
+					$scope.reverse = !$scope.reverse; //if true make it false and vice versa
+				}
+			});
+</script>
 
-<div class="container" >
+<div class="container"ng-app="repeatSample1" >
 <h1 style="font-family:monotype corsiva; color:#000000;" ><b> PRODUCT</b></h1>
 
 	<c:url var="addAction" value="/addproduct"></c:url>
@@ -74,7 +88,12 @@ font-weight: bold;
 					</form:label></td>
 				<td><form:input path="description" required="true" style="color:black;"/></td>
 			</tr>
-			<tr>
+		<tr>
+				<td><form:label path="image_link">
+						<spring:message text="Image_link" />
+					</form:label></td>
+				<td><form:input path="image_link" required="true" /></td>
+			</tr>
 				
 			
 			<tr>
@@ -120,7 +139,7 @@ font-weight: bold;
 				<th width="400">Product Description</th>
 				<th width="80">Category</th>
 				<th width="80">Supplier</th>
-				
+				<th width="200">Image_link</th>
 				<th width="80">Image</th>
 				<th width="60">Edit</th>
 				<th width="60">Delete</th>
@@ -133,9 +152,9 @@ font-weight: bold;
 					<td>${product.description}</td>
 					<td>${product.category.name}</td>
 					<td>${product.supplier.name}</td>
-					
+					<td>${product.image_link}</td>
 					<td>${product.image}</td>
-					<td><img src="<c:url value="E:\image/${product.id}.jpg"/>" style="width:75px;height:75px"></td>
+					<td><img src="<c:url value="${product.image_link}.jpg"/>" style="width:75px;height:75px"></td>
 					<td><a href="<c:url value='editproduct/${product.id}' />">Edit</a></td>
 					<td><a href="<c:url value='removeproduct/${product.id}' />">Delete</a></td>
 				</tr>
